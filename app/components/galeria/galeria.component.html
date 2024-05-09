@@ -1,0 +1,24 @@
+<div class="row">
+
+    @for (item of autos; track item) {
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="{{item.images.main}}">
+          <img src="{{item.images.main}}" alt="Lights" style="width:100%">
+          
+        </a>
+        <div class="caption">
+            <p>
+                Marca: {{item.marca}}
+                Precio: {{item.precio}}  
+                
+                <Button class="btn btn-primary" [routerLink]="['/autos', item.placa]">
+                    Ver Detalles
+                </Button>
+            </p>
+        </div>
+      </div>
+    </div>
+    }  
+   
+  </div>
